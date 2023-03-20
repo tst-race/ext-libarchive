@@ -36,14 +36,6 @@ if __name__ == "__main__":
     builder.make_dirs(args)
     builder.setup_logger(args)
 
-    # builder.install_packages(args, [
-    #     "automake=1:1.16.1*",
-    #     "libtool=2.4.6*",
-    # ])
-    # builder.install_ext(args, [
-    #     ("gf-complete", args.gf_complete_version),
-    # ])
-
     builder.fetch_source(
         args=args,
         source=f"https://github.com/libarchive/libarchive/releases/download/v{args.version}/libarchive-{args.version}.tar.gz",
