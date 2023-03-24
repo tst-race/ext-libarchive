@@ -7,7 +7,7 @@ This repo provides scripts to custom-build the
 
 The libarchive library is licensed under the 2-Clause BSD license.
 
-Additionally the build scripts in this repo are licensed under Apache 2.0.
+Only the build scripts in this repo are licensed under Apache 2.0.
 
 ## Dependencies
 
