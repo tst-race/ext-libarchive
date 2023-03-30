@@ -30,7 +30,7 @@ def get_cli_arguments():
     parser = builder.get_arg_parser(
         "libarchive",
         "3.3.2",
-        1,
+        2,
         __file__,
         [builder.TARGET_ANDROID_x86_64, builder.TARGET_ANDROID_arm64_v8a],
     )
@@ -90,6 +90,11 @@ if __name__ == "__main__":
         ],
         cwd=source_dir,
         env=env,
+    )
+    builder.copy(
+        args,
+        os.path.join(source_dir, "contrib/android/include/android_lf.h"),
+        os.path.join(args.install_dir, "include/"),
     )
 
     builder.create_package(args)
